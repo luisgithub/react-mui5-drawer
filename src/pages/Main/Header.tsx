@@ -40,7 +40,7 @@ export default function Header({ onToggle }: HeaderProps) {
   //   const user = useContext(Auth.State);
   //   const dispatch = useContext(Auth.Dispatch);
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+
   const notifications = {};
   const [anchorAccountEl, setAnchorAccountEl] = React.useState<null | HTMLElement>(null);
   const [anchorNotificationsEl, setAnchorNotificationsEl] = React.useState<null | HTMLElement>(null);
@@ -57,14 +57,14 @@ export default function Header({ onToggle }: HeaderProps) {
     setAnchorAccountEl(null);
   };
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+  // const handleDrawerOpen = () => {
+  //   setOpen(true);
+  // };
 
   return (
     <>
       <CssBaseline />
-      <AppBar position="absolute" open={open} sx={{ paddingRight: 24 }}>
+      <AppBar position="absolute" sx={{ paddingRight: 24 }}>
         <Toolbar
           sx={{
             display: "flex",
@@ -77,7 +77,7 @@ export default function Header({ onToggle }: HeaderProps) {
           <IconButton
             color="inherit"
             aria-label="open drawer"
-            onClick={handleDrawerOpen}
+            onClick={onToggle}
             edge="start"
             sx={{
               marginRight: "12px",
@@ -127,8 +127,7 @@ export default function Header({ onToggle }: HeaderProps) {
             <IconButton onClick={handleAccountClick} color="inherit">
               <AccountCircle />
               <Typography component="h2" variant="h6" color="inherit">
-                {/* {userInfo?.nombre} */}
-                {"nombre de usuario"}
+                {"userInfo?.nombre"}
               </Typography>
             </IconButton>
           </Tooltip>

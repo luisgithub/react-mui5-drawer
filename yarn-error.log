@@ -1,30 +1,30 @@
 Arguments: 
-  /Users/luisgarcia/.nvm/versions/node/v16.13.0/bin/node /usr/local/Cellar/yarn/1.22.15/libexec/bin/yarn.js add @fontsource/foboto
+  /Users/luisg/.nvm/versions/node/v15.14.0/bin/node /opt/homebrew/bin/yarn add @react-router-dom
 
 PATH: 
-  /Users/luisgarcia/.nvm/versions/node/v16.13.0/bin:/usr/local/opt/postgresql@10/bin:/usr/local/sbin:/usr/local/opt/mysql@5.6/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/usr/local/opt/postgresql@10/bin:/usr/local/sbin:/usr/local/opt/mysql@5.6/bin:/opt/local/bin:/opt/local/sbin
+  /Users/luisg/.nvm/versions/node/v15.14.0/bin:/Applications/Sublime Text.app/Contents/SharedSupport/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/luisg/.nvm/versions/node/v15.14.0/bin:/Applications/Sublime Text.app/Contents/SharedSupport/bin:/opt/homebrew/bin:/opt/homebrew/sbin
 
 Yarn version: 
-  1.22.15
+  1.22.10
 
 Node version: 
-  16.13.0
+  15.14.0
 
 Platform: 
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@fontsource%2ffoboto: Not found
-      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.15/libexec/lib/cli.js:67031:18)
-      at Request.self.callback (/usr/local/Cellar/yarn/1.22.15/libexec/lib/cli.js:140885:22)
-      at Request.emit (node:events:390:28)
-      at Request.<anonymous> (/usr/local/Cellar/yarn/1.22.15/libexec/lib/cli.js:141857:10)
-      at Request.emit (node:events:390:28)
-      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.22.15/libexec/lib/cli.js:141779:12)
-      at Object.onceWrapper (node:events:509:28)
-      at IncomingMessage.emit (node:events:402:35)
-      at endReadableNT (node:internal/streams/readable:1343:12)
-      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+  Error: https://registry.yarnpkg.com/@react-router-dom: Request "https://registry.yarnpkg.com/@react-router-dom" returned a 405
+      at Request.params.callback [as _callback] (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:66997:18)
+      at Request.self.callback (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:140662:22)
+      at Request.emit (node:events:369:20)
+      at Request.<anonymous> (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:141634:10)
+      at Request.emit (node:events:369:20)
+      at IncomingMessage.<anonymous> (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:141556:12)
+      at Object.onceWrapper (node:events:475:28)
+      at IncomingMessage.emit (node:events:381:22)
+      at endReadableNT (node:internal/streams/readable:1307:12)
+      at processTicksAndRejections (node:internal/process/task_queues:81:21)
 
 npm manifest: 
   {
@@ -34,6 +34,7 @@ npm manifest:
     "dependencies": {
       "@emotion/react": "^11.7.1",
       "@emotion/styled": "^11.6.0",
+      "@fontsource/roboto": "^4.5.1",
       "@mui/icons-material": "^5.2.1",
       "@mui/material": "^5.2.3",
       "@testing-library/jest-dom": "^5.11.4",
@@ -1358,6 +1359,11 @@ Lockfile:
       lodash "^4.17.20"
       minimatch "^3.0.4"
       strip-json-comments "^3.1.1"
+  
+  "@fontsource/roboto@^4.5.1":
+    version "4.5.1"
+    resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-4.5.1.tgz#63f7b783f755d8f6727eb60198627e7e1be3ac20"
+    integrity sha512-3mhfL+eNPG/woMNqwD/OHaW5qMpeGEBsDwzmhFmjB1yUV+M+M9P0NhP/AyHvnGz3DrqkvZ7CPzNMa+UkVLeELg==
   
   "@hapi/address@2.x.x":
     version "2.1.4"
@@ -3431,9 +3437,9 @@ Lockfile:
       lodash.uniq "^4.5.0"
   
   caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001125, caniuse-lite@^1.0.30001181:
-    version "1.0.30001191"
-    resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001191.tgz#bacb432b6701f690c8c5f7c680166b9a9f0843d9"
-    integrity sha512-xJJqzyd+7GCJXkcoBiQ1GuxEiOBCLQ0aVW9HMekifZsAVGdj5eJ4mFB9fEhSHipq9IOk/QXFJUiIr9lZT+EsGw==
+    version "1.0.30001286"
+    resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001286.tgz"
+    integrity sha512-zaEMRH6xg8ESMi2eQ3R4eZ5qw/hJiVsO/HlLwniIwErij0JDr9P+8V4dtx1l+kLq6j3yy8l8W4fst1lBnat5wQ==
   
   capture-exit@^2.0.0:
     version "2.0.0"
