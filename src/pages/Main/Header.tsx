@@ -1,11 +1,23 @@
 import React from "react";
-import { styled, useTheme, Theme, CSSObject } from "@mui/material/styles";
+import { styled, useTheme } from "@mui/material/styles";
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
-import { Badge, Box, CssBaseline, Menu, MenuItem, Tooltip, Typography } from "@mui/material";
+import {
+  Badge,
+  Box,
+  CssBaseline,
+  Menu,
+  MenuItem,
+  Tooltip,
+  Typography,
+} from "@mui/material";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { AccountCircle, NotificationsActive, NotificationsNone } from "@mui/icons-material";
+import {
+  AccountCircle,
+  NotificationsActive,
+  NotificationsNone,
+} from "@mui/icons-material";
 // import Auth, { doLogout } from "state/Auth";
 
 // const drawerWidth = 240;
@@ -42,8 +54,10 @@ export default function Header({ onToggle }: HeaderProps) {
   const theme = useTheme();
 
   const notifications = {};
-  const [anchorAccountEl, setAnchorAccountEl] = React.useState<null | HTMLElement>(null);
-  const [anchorNotificationsEl, setAnchorNotificationsEl] = React.useState<null | HTMLElement>(null);
+  const [anchorAccountEl, setAnchorAccountEl] =
+    React.useState<null | HTMLElement>(null);
+  const [anchorNotificationsEl, setAnchorNotificationsEl] =
+    React.useState<null | HTMLElement>(null);
 
   const handleNotificationsMenuClose = () => {
     setAnchorNotificationsEl(null);
@@ -97,7 +111,13 @@ export default function Header({ onToggle }: HeaderProps) {
               alignItems: "center",
             }}
           >
-            <Box sx={{ height: 36, marginRight: 6, backgroundImage: `url('/logo.png')` }}></Box>
+            <Box
+              sx={{
+                height: 36,
+                marginRight: 6,
+                backgroundImage: `url('/logo.png')`,
+              }}
+            ></Box>
             {"userInfo?.empresa"} - {"userInfo?.sucursal"}
           </Typography>
           <Tooltip title="Notificaciones">
@@ -132,7 +152,13 @@ export default function Header({ onToggle }: HeaderProps) {
             </IconButton>
           </Tooltip>
 
-          <Menu id="accountMenu" anchorEl={anchorAccountEl} keepMounted open={Boolean(anchorAccountEl)} onClose={handleAccountMenuClose}>
+          <Menu
+            id="accountMenu"
+            anchorEl={anchorAccountEl}
+            keepMounted
+            open={Boolean(anchorAccountEl)}
+            onClose={handleAccountMenuClose}
+          >
             <MenuItem>Perfil de Usuario</MenuItem>
             <MenuItem onClick={() => console.log("hola")}>Salir</MenuItem>
           </Menu>

@@ -8,7 +8,10 @@ export default function Page(props: any) {
   const theme = useTheme();
 
   return (
-    <Container maxWidth="lg" sx={{ paddingTop: theme.spacing(4), paddingBottom: theme.spacing(4) }}>
+    <Container
+      maxWidth="lg"
+      sx={{ paddingTop: theme.spacing(4), paddingBottom: theme.spacing(4) }}
+    >
       <Row spacing={3}>
         <Col size={12}>
           <div style={{ margin: "20px 10px" }}>

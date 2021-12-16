@@ -1,6 +1,6 @@
 import { styled } from "@mui/system";
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import PageNotFound from "../PageNotFound";
 
 const Main = styled("main")({
   height: "100vh",
@@ -8,7 +8,7 @@ const Main = styled("main")({
 });
 
 const Spacer = styled("div")(({ theme }) => ({
-  appBarSpacer: theme.mixins.toolbar,
+  // appBarSpacer: theme.mixins.toolbar,
 }));
 
 const Content = styled("div")({
@@ -23,9 +23,8 @@ export default function RountesContent() {
       <Main>
         <Spacer />
         <Content>
-          <BrowserRouter>
-            <Routes>
-              {/* <Route path="/" element={DashboardPage} />
+          <Routes>
+            {/* <Route path="/" element={DashboardPage} />
               <Route path="/clientes" element={CatalogoClientes} />
               <Route path="/conceptos" element={CatalogoConceptos} />
               <Route path="/costosUnitarios" element={CostosUnitariosPage} />
@@ -44,9 +43,8 @@ export default function RountesContent() {
 
               <Route path="/demo" element={Demo} /> */}
 
-              <Route element={PageNotFound} />
-            </Routes>
-          </BrowserRouter>
+            <Route index element={<PageNotFound />} />
+          </Routes>
         </Content>
       </Main>
     </>

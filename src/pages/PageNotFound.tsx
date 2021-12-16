@@ -1,6 +1,5 @@
-import React from "react";
-import { Page, Title } from "components";
 import { Grid, Button } from "@mui/material";
+import { Page, Title } from "../components";
 
 export default function PageNotFound(props: any) {
   return (
